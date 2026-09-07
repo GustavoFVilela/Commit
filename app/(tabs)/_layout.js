@@ -14,14 +14,15 @@ export default function TabLayout() {
         },
         tabBarActiveTintColor: '#38b06c',
         tabBarInactiveTintColor: '#888',
+        
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Commit',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="folder-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name="folder-outline" size={focused ? size + 4 : size} color={color} />
           ),
         }}
       />
@@ -29,8 +30,8 @@ export default function TabLayout() {
         name="dates"
         options={{
           title: 'Datas',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name="time-outline" size={focused ? size + 4 : size} color={color} />
           ),
         }}
       />
@@ -38,8 +39,8 @@ export default function TabLayout() {
         name="calendar"
         options={{
           title: 'Calendário',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="calendar-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name="calendar-outline" size={focused ? size + 4 : size} color={color} />
           ),
         }}
       />

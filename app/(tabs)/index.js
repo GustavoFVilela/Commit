@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function FoldersScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Commit's</Text>
+      <Text style={styles.text}>Commits</Text>
     </View>
   );
 }
